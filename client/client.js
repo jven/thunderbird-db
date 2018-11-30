@@ -54,9 +54,14 @@ function main() {
     return new THREE.Color(r,g,b);
   };
 
+  var prev_time = (new Date()).getTime();
 
   function start() {
-      let send = function() {
+      let send = function(time) {
+          if (Math.abs(time - prev_time) < 50) {
+            return requestAnimationFrame(send);
+          }
+          prev_time = time;
           try {
               if (codeChanged) {
                   codeChanged = false;

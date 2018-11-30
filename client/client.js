@@ -242,8 +242,8 @@ function main() {
 
   loadSavedCode();
   start();
-  setupScene();
-  animate();
+  // setupScene();
+  // animate();
 }
 
 window.onload = main;

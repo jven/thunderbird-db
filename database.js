@@ -52,7 +52,7 @@ class Database {
   onConnect_(err, database) {
     if (err) {
       console.error('Error connecting to database: ' + err);
-      console.error('WARNING: Codes will only be written to localStorage!');
+      console.error('WARNING: Codes will NOT be saved!');
       return;
     }
     console.log('Successfully connected to database.');
